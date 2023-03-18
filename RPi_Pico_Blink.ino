@@ -9,7 +9,8 @@
 //     Verified Boards: "Raspberry Pi Pico W"
 //=============================================================================
 #define ON_TIME 300
-#define OFF_TIME 1000
+#define SHORT_OFF_TIME 300
+#define LONG_OFF_TIME 1000
 
 void LED_On(long delay_ms);
 void LED_Off(long delay_ms);
@@ -32,6 +33,12 @@ void loop()
   LED_On(ON_TIME);
   
   //___ LED off ______________________________________________________________                   
-  LED_Off(OFF_TIME);                       
+  LED_Off(SHORT_OFF_TIME);
+
+//___ LED on ______________________________________________________________
+  LED_On(ON_TIME);
+  
+  //___ LED off ______________________________________________________________                   
+  LED_Off(LONG_OFF_TIME); 
 
 }
