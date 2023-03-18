@@ -30,6 +30,6 @@ void loop()
   
   //___ LED off ______________________________________________________________                   
   digitalWrite(LED_BUILTIN, LOW);    
-  delay(300);                       
+  delay(1000);                       
 
 }
