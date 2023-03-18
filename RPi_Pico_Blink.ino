@@ -8,7 +8,11 @@
 //  
 //     Verified Boards: "Raspberry Pi Pico W"
 //=============================================================================
+#define ON_TIME 300
+#define OFF_TIME 1000
 
+void LED_On(long delay_ms);
+void LED_Off(long delay_ms);
 
 //===========================================================================
 // Initial setup before entering main loop
@@ -25,11 +29,9 @@ void setup()
 void loop() 
 {
   //___ LED on ______________________________________________________________
-  digitalWrite(LED_BUILTIN, HIGH);   
-  delay(300);
+  LED_On(ON_TIME);
   
   //___ LED off ______________________________________________________________                   
-  digitalWrite(LED_BUILTIN, LOW);    
-  delay(1000);                       
+  LED_Off(OFF_TIME);                       
 
 }
